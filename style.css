@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: transparent;
+}
+
+header {
+  margin-top: 3em;
+  text-align: center;
+  color: blue;
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: 900;
+}
+
+#container3D {
+  max-width: 100%;
+  background-color: transparent;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+#container3D canvas {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  max-width: 80%;
+  max-height: 80%;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#zoom-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure the buttons appear above the 3D scene */
+}
+
+#zoom-in-button,
+#zoom-out-button {
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#zoom-in-button:hover,
+#zoom-out-button:hover {
+  background-color: #21a1f1;
+}
+
+#opacity-slider-container {
+  position: absolute;
+  top: 10px; /* Adjusted position above model selector */
+  right: 200px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+  padding: 10px;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  font-weight: bold;
+  color: black;
+}
+
+#opacity-slider {
+  width: 100%; /* Full width for the slider */
+}

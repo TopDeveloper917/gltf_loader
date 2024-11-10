@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>A simple three.js 3D viewer app.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- <header>
+    <h1>3D Model Viewer</h1>
+  </header> -->
+
+  <div id="container3D">
+  </div>
+  <div id="zoom-buttons">
+    <button id="zoom-in-button">Zoom In</button>
+    <button id="zoom-out-button">Zoom Out</button>
+  </div>
+  <div id="opacity-slider-container">
+    <label for="opacity-slider">Opacity:</label>
+    <input type="range" id="opacity-slider" min="0" max="100" value="100" />
+  </div>
+
+
+  <script type="module" src="main.js"></script>
+  <script>
+    const container = document.getElementById('container3D');
+    const opacitySlider = document.getElementById('opacity-slider');
+
+    // Update container opacity based on slider value
+    opacitySlider.addEventListener('input', (event) => {
+      const opacityValue = event.target.value / 100; // Convert to a decimal
+      container.style.opacity = `${opacityValue}`;
+    });
+  </script>
+</body>
+
+</html>
